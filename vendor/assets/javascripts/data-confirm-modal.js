@@ -128,12 +128,14 @@
     var modalClass = options.modalClass ? options.modalClass : settings.modalClass;
 
     var modal = $(
-      '<div id="'+id+'" class="modal '+modalClass+' '+fade+'" tabindex="-1" role="dialog" aria-labelledby="'+id+'Label" aria-hidden="true">' +
-        '<div class="modal-dialog">' +
+      '<div id="'+id+'" class="modal '+modalClass+' '+fade+'" tabindex="-1" >' +
+        '<div class="modal-dialog" role="document">' +
           '<div class="modal-content">' +
             '<div class="modal-header">' +
-              '<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>' +
               '<h4 id="'+id+'Label" class="modal-title"></h4> ' +
+              '<button type="button" class="close" data-dismiss="modal" aria-label="Close">' +
+                '<span aria-hidden="true">&times;</span>' +
+              '</button>' +
             '</div>' +
             '<div class="modal-body"></div>' +
             '<div class="modal-footer">' +
